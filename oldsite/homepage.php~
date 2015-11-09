@@ -1,0 +1,70 @@
+<?php
+/*
+Template Name: Home Page
+*/
+?>
+
+<?php get_header(); ?>
+
+	<div id="content-home">
+
+		<a href="/code">
+			<div id="spacer">
+			</div>
+		</a>
+
+		<table width="100%" cellspacing="0" cellpadding="5">
+			<tbody>
+			<tr>
+				<td valign="top" width="50%">
+
+					<div class="section">
+						<h2 class="heading">What's New</h2>
+					</div>
+ 
+		 			<?php query_posts('category_name=news&showposts=4'); ?>
+	
+	  				<?php while (have_posts()) : the_post(); ?>
+
+					<div class="item">
+						<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>	
+						</a>
+					</div>
+
+					<div class="item">
+	  					<?php the_excerpt(); ?>
+					</div>
+
+  					<?php endwhile;?>
+
+				</td>
+
+				<td valign="top" width="50%">	
+
+					<div class="section">
+						<h2 class="heading">Spotlights</h2>
+					</div>
+ 
+		 			<?php query_posts('category_name=spotlight&showposts=4'); ?>
+	
+		  			<?php while (have_posts()) : the_post(); ?>
+	
+					<div class="item">
+						<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>	
+						</a>
+					</div>
+
+					<div class="item">
+	  					<?php the_excerpt(); ?>
+					</div>
+
+  					<?php endwhile;?>
+
+				</td>
+			</tr>
+			</tbody>
+	</div>
+
+<?php get_footer(); ?>

