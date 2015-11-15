@@ -1,13 +1,51 @@
 /**
  * Site header
  */
+ 
+.site-header-padding {
+    min-height: 24px;
+}
+
+.spaced {
+    margin-top: 0px;
+}
+
+.wrapper-spaced {
+    margin-top: 24px;
+    float: left;
+}
+
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    height: 130px;
+    min-height: 56px;
+    margin: auto;
+    margin-top: 24px;
+    padding: 0;
+
+    box-shadow: 10px 10px 5px #888;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    
+}
+
+
+#header-left {
+background:transparent url(http://mcaffer.com/wp-content/themes/book/images/title.png) no-repeat scroll 0% 50%;
+height:130px;
+width: 350px;
+float:right;
+display:none;
+}
+
+#header-right {
+background:transparent url(http://mcaffer.com/wp-content/themes/book/images/title.png) no-repeat scroll 50% 50%;
+width:350px;
+height:130px;
+float:right;
 }
 
 .site-title {
@@ -86,14 +124,20 @@
     }
 }
 
-
+.sidebar {
+    width: -webkit-calc(21% - (#{$spacing-unit} / 2));
+    width:         calc(21% - (#{$spacing-unit} / 2));
+    float: right;
+    padding: 20px 0px;
+}
 
 /**
  * Site footer
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+ //   padding: $spacing-unit 0;
+    clear: both;
 }
 
 .footer-heading {
@@ -121,8 +165,8 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(55% - (#{$spacing-unit} / 2));
+    width:         calc(55% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
@@ -133,6 +177,7 @@
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
+    text-align: right;
 }
 
 @include media-query($on-laptop) {
@@ -163,6 +208,9 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    width: -webkit-calc(75% - (#{$spacing-unit} / 2));
+    width:         calc(75% - (#{$spacing-unit} / 2));
+    float: left;
 }
 
 .page-heading {
@@ -181,6 +229,7 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    float: right;
 }
 
 .post-link {
@@ -198,39 +247,42 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1;
+    float: left;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 26px;
     }
 }
 
 .post-content {
+    float: left;
     margin-bottom: $spacing-unit;
+    padding-left: $spacing-unit / 2;
 
     h2 {
-        font-size: 32px;
+        font-size: 26px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
     h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
         font-size: 20px;
 
         @include media-query($on-laptop) {
             font-size: 18px;
+        }
+    }
+
+    h4 {
+        font-size: 18px;
+
+        @include media-query($on-laptop) {
+            font-size: 16px;
         }
     }
 }
