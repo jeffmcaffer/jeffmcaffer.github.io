@@ -1,10 +1,6 @@
 /**
  * Site header
  */
- 
-.site-header-padding {
-    min-height: 24px;
-}
 
 .spaced {
     margin-top: 0px;
@@ -16,7 +12,6 @@
 }
 
 .site-header {
-
     // Positioning context for the mobile navigation icon
     position: relative;
 
@@ -24,6 +19,7 @@
     min-height: 56px;
     margin: auto;
     margin-top: 24px;
+    margin-bottom: 10px;
     padding: 0;
 
     box-shadow: 10px 10px 5px #888;
@@ -32,33 +28,30 @@
     
 }
 
-
-#header-left {
-background:transparent url(http://mcaffer.com/wp-content/themes/book/images/title.png) no-repeat scroll 0% 50%;
-height:130px;
-width: 350px;
-float:right;
-display:none;
-}
-
-#header-right {
-background:transparent url(http://mcaffer.com/wp-content/themes/book/images/title.png) no-repeat scroll 50% 50%;
-width:350px;
-height:130px;
-float:right;
-}
-
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
+.site-header-block {
+    width:350px;
+    height:130px;
+    float: right;
+    text-shadow: 0px 0px 20px #FFFFFF;
+    text-align: center;
+    font-weight: 500;
+    
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $text-color;
+        // color: $grey-color-dark;
     }
+}
+
+.site-header-title {
+    width:350px;
+    padding-top: 30px;
+    font-size: 36px;
+}
+
+.site-header-subtitle {
+    vertical-align: top;
+    font-size: 20px;
 }
 
 .site-nav {
@@ -128,7 +121,7 @@ float:right;
     width: -webkit-calc(21% - (#{$spacing-unit} / 2));
     width:         calc(21% - (#{$spacing-unit} / 2));
     float: right;
-    padding: 20px 0px;
+    padding: $spacing-unit 0px;
 }
 
 /**
@@ -237,17 +230,46 @@ float:right;
     font-size: 24px;
 }
 
+// Tags
+.tag-cloud {
+    
+}
 
+.tag-cloud-1 { font-size: 3pt; }
+.tag-cloud-2 { font-size: 6pt; }
+.tag-cloud-3 { font-size: 9pt; }
+.tag-cloud-4 { font-size: 12pt; }
+.tag-cloud-5 { font-size: 15pt; }
+.tag-cloud-6 { font-size: 18pt; }
+.tag-cloud-7 { font-size: 21pt; }
+.tag-cloud-8 { font-size: 24pt; }
+.tag-cloud-9 { font-size: 27pt; }
+.tag-cloud-10 { font-size: 30pt; }
+
+.tag-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: 0;
+    }
+}
+
+.tag-date {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
 
 /**
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    // margin-bottom: $spacing-unit;
+    margin-bottom: 0;
 }
 
 .post-title {
-    font-size: 32px;
+    font-size: 26px;
     letter-spacing: -1px;
     line-height: 1;
     float: left;
@@ -260,7 +282,7 @@ float:right;
 .post-content {
     float: left;
     margin-bottom: $spacing-unit;
-    padding-left: $spacing-unit / 2;
+    // padding-left: $spacing-unit / 2;
 
     h2 {
         font-size: 26px;

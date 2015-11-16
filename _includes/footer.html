@@ -1,5 +1,5 @@
 <footer class="site-footer wrapper spaced">
-  <h2 class="footer-heading">{{ site.title }}</h2>
+  <!--<h2 class="footer-heading">{{ site.title }}</h2>-->
 
   <div class="footer-col-wrapper">
     <div class="footer-col  footer-col-1">
@@ -11,15 +11,17 @@
           <path fill="#828282 " d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z ">
       </path>
       </svg>
-      </span>-->
+      </span>--> 
       </a>
 
       &nbsp;&nbsp;
 
-      <a href="/feed.xml"><img src="feed-icon-14x14.png" /> <span class="username ">rss</span></a>
+      <a href="/feed.xml"><img src="/images/feed-icon-14x14.png" /> <span class="username ">rss</span></a>
 
-      &nbsp;&nbsp; {% if site.github_username %}
-      <a href="https://github.com/{{ site.github_username }} ">
+      &nbsp;&nbsp; 
+      
+      {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}">
         <span class="icon icon--github ">
                 <svg viewBox="0 0 16 16 ">
                   <path fill="#828282 " d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
@@ -31,8 +33,12 @@
               </span>
         <span class="username ">{{ site.github_username }}</span>
       </a>
-      {% endif %} &nbsp;&nbsp; {% if site.twitter_username %}
-      <a href="https://twitter.com/{{ site.twitter_username }} ">
+      {% endif %} 
+      
+      &nbsp;&nbsp; 
+      
+      {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}">
         <span class="icon icon--twitter ">
                 <svg viewBox="0 0 16 16 ">
                   <path fill="#828282 " d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -42,7 +48,6 @@
       c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z "> </path>
                 </svg>
               </span>
-
         <span class="username ">{{ site.twitter_username }}</span>
       </a>
       {% endif %}

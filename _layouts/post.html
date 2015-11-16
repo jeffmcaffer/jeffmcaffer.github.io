@@ -3,15 +3,23 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
+  <header>
     <div>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+
+      <h2 class="post-header">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </h2> 
+
+    <!--<h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>-->
     </div>
   </header>
 
   <article class="post-content">
     {{ content }}
+    {% include disqus.html %}
   </article>
 
 </div>
+ 

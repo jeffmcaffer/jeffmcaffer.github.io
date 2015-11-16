@@ -1,5 +1,5 @@
 # Site settings
-title: 
+title: Jeff McAffer
 email: jeffmcaffer@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Jeff McAffer on open source, Microsoft, and maybe even car racing.
@@ -7,6 +7,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mcaffer.com" # the base hostname & protocol for your site
 twitter_username: jeffmcaffer
 github_username:  jeffmcaffer
+
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown

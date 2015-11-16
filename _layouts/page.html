@@ -3,9 +3,15 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+  <header>
+      <h2 class="post-header">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </h2> 
   </header>
+
+  <!--<header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>-->
 
   <article class="post-content">
     {{ content }}
