@@ -1,34 +1,26 @@
 <div class="tag-cloud">
 
- {% capture tags %}
-  {% for tag in site.tags %}
-    {{ tag[0] }}
-  {% endfor %}
-{% endcapture %}
-{% assign sortedtags = tags | split:' ' | uniq | sort %}
-
-{% assign min = 1000 %}
+{% assign min = 100000 %}
 {% assign max = 0 %}
 {% for tag in site.tags %}
   {% if tag[1].size > max  %}
     {% assign max = tag[1].size %}
-  {% else %}
-    {% if tag[1].size < min  %}
-  	  {% assign min = tag[1].size %}
-    {% endif %}
+  {% endif %}
+  {% if tag[1].size < min  %}
+	  {% assign min = tag[1].size %}
   {% endif %}
 {% endfor %}
-
 {% assign range = max | minus: min | plus: 1 %}
 
+{% assign sortedtags = site.tags | sort %}
 {% for tag in sortedtags %}
-  {% assign count = site.tags[tag].size %}
+  {% assign count = tag[1].size %}
   {% if range > 10 %}
     {% assign font = count | minus: min | times: 10 | divided_by: range | plus: 1 %}
   {% else %}
 	  {% assign font = 10 | minus: range | divided_by: 2 | plus: count %}
   {% endif %}
-  <a href="/tags.html#{{ tag | first }}" class="tag-cloud-{{ font }}" >{{ tag }}</a>
+  <a href="/tags.html#{{ tag | first }}" style="font-size: {{ font | times: 3 }}pt" >{{ tag | first }}</a>
 {% endfor %}
 
 </div>

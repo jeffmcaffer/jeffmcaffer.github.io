@@ -203,6 +203,8 @@
     padding: $spacing-unit 0;
     width: -webkit-calc(75% - (#{$spacing-unit} / 2));
     width:         calc(75% - (#{$spacing-unit} / 2));
+    max-width: -webkit-calc(75% - (#{$spacing-unit} / 2));
+    max-width:         calc(75% - (#{$spacing-unit} / 2));
     float: left;
 }
 
@@ -234,17 +236,6 @@
 .tag-cloud {
     
 }
-
-.tag-cloud-1 { font-size: 3pt; }
-.tag-cloud-2 { font-size: 6pt; }
-.tag-cloud-3 { font-size: 9pt; }
-.tag-cloud-4 { font-size: 12pt; }
-.tag-cloud-5 { font-size: 15pt; }
-.tag-cloud-6 { font-size: 18pt; }
-.tag-cloud-7 { font-size: 21pt; }
-.tag-cloud-8 { font-size: 24pt; }
-.tag-cloud-9 { font-size: 27pt; }
-.tag-cloud-10 { font-size: 30pt; }
 
 .tag-list {
     margin-left: 0;
@@ -282,7 +273,8 @@
 .post-content {
     float: left;
     margin-bottom: $spacing-unit;
-    // padding-left: $spacing-unit / 2;
+    max-width: -webkit-calc(100%);
+    max-width:         calc(100%);
 
     h2 {
         font-size: 26px;

@@ -10,6 +10,8 @@ github_username:  jeffmcaffer
 
 excerpt_separator: <!--more-->
 
+permalink: /:year/:month/:title
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
