@@ -6,7 +6,6 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: auto;
     padding: 0;
-    list-style-position: inside;
 }
 
 
@@ -70,8 +69,6 @@ ul, ol {
 }
 
 li {
-   padding-left: 25px ;
-   text-indent: -25px;
     > ul,
     > ol {
          margin-bottom: 0;

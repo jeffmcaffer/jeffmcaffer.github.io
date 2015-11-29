@@ -299,4 +299,13 @@
             font-size: 16px;
         }
     }
+    
+    ul, ol {
+        list-style-position: inside;
+    }
+    
+    li {
+        padding-left: 25px ;
+        text-indent: -25px;
+    }
 }
