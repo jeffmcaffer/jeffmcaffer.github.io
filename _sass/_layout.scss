@@ -19,7 +19,7 @@
     min-height: 56px;
     margin: auto;
     margin-top: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     padding: 0;
 
     box-shadow: 10px 10px 5px #888;
@@ -32,7 +32,7 @@
     width:350px;
     height:130px;
     float: right;
-    text-shadow: 0px 0px 20px #FFFFFF;
+    text-shadow: 0px 0px 10px #FFFFFF;
     text-align: center;
     font-weight: 500;
     
@@ -118,8 +118,8 @@
 }
 
 .sidebar {
-    width: -webkit-calc(21% - (#{$spacing-unit} / 2));
-    width:         calc(21% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(22% - (#{$spacing-unit} / 2));
+    width:         calc(22% - (#{$spacing-unit} / 2));
     float: right;
     padding: $spacing-unit 0px;
 }
@@ -213,9 +213,10 @@
 }
 
 .post-list {
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
     list-style: none;
-
+    
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -229,7 +230,7 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 // Tags
@@ -298,14 +299,5 @@
         @include media-query($on-laptop) {
             font-size: 16px;
         }
-    }
-    
-    ul, ol {
-        list-style-position: inside;
-    }
-    
-    li {
-        padding-left: 25px ;
-        text-indent: -25px;
     }
 }

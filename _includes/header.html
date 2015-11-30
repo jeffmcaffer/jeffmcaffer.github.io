@@ -1,8 +1,10 @@
 <header>
 
+  {% assign index = site.time | date: "%H" | modulo: site.data.banners.size %}
+  {% assign banner = site.data.banners[index]["file"] %}
 
   <a href="{{ site.url }}" class="site-header-link">
-    <div class="site-header" style="background:transparent url(/images/header/header-anegada1.jpg) no-repeat center bottom; "> 
+    <div class="site-header" style="background:transparent url(/images/header/{{ banner }}) no-repeat center bottom; "> 
       <!--<div id="header-left"></div>-->
       <!--<div id="header-right">Jeff McAffer</div>-->
       <div class="site-header-block">
