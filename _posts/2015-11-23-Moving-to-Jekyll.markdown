@@ -89,7 +89,30 @@ The snippet below is `tagcloud.html` you can include wherever you want the tag c
 {% endhighlight %}
 
 # "Random" banner images
-The site has a banner image that is typically a panorama shot that I took somewhere along the way. The image shown should change over time.  This could be done with some Javascript on the page that varied the image link but, in the interest of keeping it simple, the image selection should be part of the site itself.  Liquid does not have a random filter/function but it does have time.  In particular, it has `site.time`.  With this and the `modulo` filter we're off to the races.
+The site has a banner image that is typically a panorama shot that I took somewhere along the way. The image shown should change over time.  This could be done with some Javascript on the page that varied the image link but, in the interest of keeping it simple, the image selection should be part of the site itself.  Liquid does not have a random filter/function but it does have time.  In particular, it has `site.time`.  With this and the [`date`](https://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date) and `modulo` filters, we're off to the races.
+
+First, use Jekyll's [data file facility](http://jekyllrb.com/docs/datafiles/) to create an indexable list of banner images.  Create a `_data` folder and add a simple banners.csv that lists the banner image files like so.
+
+{% highlight csv %}
+number,file
+1,header-anegada1.jpg
+2,header-anegada2.jpg
+3,header-canadaday.jpg
+4,header-loblolly.jpg
+5,header-saba.jpg
+{% endhighlight %}
+
+Then update the `header.html` include file to pick a banner at publishing time.  In the snippet below we get the date and modulo it by the number of entries in the banner data file.  Then use that index to find the banner file to use.  Finally, that file is used as the background for the page header.
+
+{% highlight liquid %}
+{% raw %}
+{% assign index = site.time | date: "%H" | modulo: site.data.banners.size %}
+{% assign banner = site.data.banners[index]["file"] %}
+
+<a href="{{ site.url }}" class="site-header-link">
+  <div class="site-header" style="background:transparent url(/images/header/{{ banner }}) no-repeat center bottom; "> 
+{% endraw %}
+{% endhighlight %}
 
 # Wrap up
 That's it for now. Going forward I'd like to add a post archive by date and a few affordances to make it easy for you to tweet the things you find interesting.  Mostly the site will stay simple.  Let me know in the comments if you have any suggestions.
