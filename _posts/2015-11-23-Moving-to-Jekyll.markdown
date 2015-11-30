@@ -111,6 +111,8 @@ Then update the `header.html` include file to pick a banner at publishing time. 
 
 <a href="{{ site.url }}" class="site-header-link">
   <div class="site-header" style="background:transparent url(/images/header/{{ banner }}) no-repeat center bottom; "> 
+  </div>
+</a>
 {% endraw %}
 {% endhighlight %}
 
