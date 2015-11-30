@@ -93,7 +93,7 @@ The site has a banner image that is typically a panorama shot that I took somewh
 
 First, use Jekyll's [data file facility](http://jekyllrb.com/docs/datafiles/) to create an indexable list of banner images.  Create a `_data` folder and add a simple banners.csv that lists the banner image files like so.
 
-{% highlight ini %}
+{% highlight html %}
 file
 header-anegada1.jpg
 header-anegada2.jpg
