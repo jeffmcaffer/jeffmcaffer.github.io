@@ -11,4 +11,14 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   {% include googleanalytics.html %}
+
+  <script>
+    window.onload = () => {
+      var image = Math.floor(Math.random() * 6);
+      var header = document.querySelector(".site-header")
+      header.style.background = `transparent url(/images/header/${image}.jpg) no-repeat center bottom`
+      header.style.backgroundSize = 'cover'
+    }
+  </script>
+        
 </head>
