@@ -6,20 +6,22 @@
 <body>
   {% include header.html %}
 
-  <div class="wrapper spaced">
-    <div class="page-content">
-      {{ content }} 
-    </div>
+  <div class="column">
+    <div class="wrapper spaced">
+      <div class="page-content">
+        {{ content }} 
+      </div>
 
-    <div class="sidebar">
-      {% include right-about.html %}
-      <p/>
-      {% include tagcloud.html %}
-      
+      <div class="sidebar">
+        {% include right-about.html %}
+        <p/>
+        {% include tagcloud.html %}
+        
+      </div>
     </div>
+    {% include footer.html %}
   </div>
 
-  {% include footer.html %}
 </body>
 
 </html>

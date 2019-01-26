@@ -17,11 +17,9 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    // font-weight: 400;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    max-width: 1100px;
 }
 
 
@@ -90,15 +88,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: lighten($brand-color, 15%);
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+      color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: darken($brand-color, 15%);
         text-decoration: none;
     }
 }
