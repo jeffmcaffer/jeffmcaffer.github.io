@@ -40,6 +40,12 @@ $on-laptop:        800px;
     @media screen and (max-width: $device) {
         @content;
     }
+    @media (max-width: 40em) {
+        .sidebar {
+            display: none;
+        }
+    }
+    
 }
 
 
