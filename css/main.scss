@@ -42,7 +42,11 @@ $on-laptop:        800px;
     }
     @media (max-width: 40em) {
         .sidebar {
-            display: none;
+            width: unset;
+        }
+        .page-content {
+            max-width: unset;
+            width: 100%;
         }
     }
     

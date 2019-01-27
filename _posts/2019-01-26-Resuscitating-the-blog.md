@@ -112,6 +112,6 @@ Took me all of 5 minutes using [INKSCAPE](https://inkscape.org/). You can see th
 
 Aside: I quite like INKSCAPE (they seem to capitalize so I'll follow suit). I've used it to do all sorts of stuff including laying out dozens and dozens of hexagons in a pattern for vinyl cutting and application to the race car. It's certainly has its quirks but I actually prefer it to Illustrator for the things that I do.
 
-#Wrap up
+# Wrap up
 
 That's all I'm going to do on the blog infrastructure for now. Next will be some technical content I think. Let me know if there is anything you want to hear about related to [Microsoft and open source](https://opensource.microsoft.com), [Pro3 racing](https://pro3-racing.com) or the [Alfa Romeo Giulia Quadrafoglio](https://www.alfaromeousa.com/cars/giulia/quadrifoglio).
