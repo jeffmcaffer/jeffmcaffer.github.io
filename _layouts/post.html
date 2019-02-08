@@ -1,14 +1,46 @@
 ---
 layout: default
 ---
-<div class="post">
 
+{% capture postUrl %}{{ page.url | prepend: site.baseurl | prepend: site.url | uri_escape }}{% endcapture %} 
+{% capture postSnag %}Jeff McAffer blogged about {{ page.title }}{% endcapture %} 
+{% capture twitterParams %}text={{ postSnag | uri_escape }}&url={{ postUrl }}{% endcapture %} 
+{% capture facebookParams %}t={{ postSnag | uri_escape }}&u={{ postUrl }}{% endcapture %}
+{% capture linkedinParams %}url=https://mcaffer.com{{ page.url | prepend: site.baseurl }}&summary={{ page.excerpt | strip_html | strip_newlines | truncate: 256 | uri_escape }}&source=https://mcaffer.com{% endcapture %}
+
+<div class="post">
   <header>
     <div>
-      <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+      <span class="post-meta">
+        <a
+          href="https://twitter.com/share?{{ twitterParams }}"
+          title="Share on Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/twitter.svg" width="16" />
+        </a>
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?{{ facebookParams }}"
+          title="Share on Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/facebook.svg" width="16" />
+        </a>
+        <a
+          href="https://www.linkedin.com/shareArticle?mini=true&{{ linkedinParams }}"
+          title="Share on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/linkedin.svg" width="16" />
+        </a>
+        &nbsp; {{ page.date | date: "%b %-d, %Y" }}
+      </span>
       <h1 class="post-header">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a>
-      </h1> 
+        <a class="post-link" href="{{ postUrl }}">{{ page.title }}</a>
+      </h1>
     </div>
   </header>
 
@@ -17,6 +49,4 @@ layout: default
     <h2 style="font-size: 30px">Comments</h2>
     {% include comments.html %}
   </article>
-
 </div>
- 
