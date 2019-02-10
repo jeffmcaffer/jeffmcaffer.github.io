@@ -9,16 +9,19 @@ layout: default
 {% capture linkedinParams %}url=https://mcaffer.com{{ page.url | prepend: site.baseurl }}&summary={{ page.excerpt | strip_html | strip_newlines | truncate: 256 | uri_escape }}&source=https://mcaffer.com{% endcapture %}
 
 <div class="post">
-  <header>
-    <div>
-      <span class="post-meta">
+  <header class="post-header-area">
+    <div class="post-meta">
+      <div>
+        {{ page.date | date: "%b %-d, %Y" }}
+      </div>
+      <div class="post-header-social">
         <a
           href="https://twitter.com/share?{{ twitterParams }}"
           title="Share on Twitter"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/twitter.svg" width="16" />
+          <img src="/images/social/twitter.svg" width="16" />
         </a>
         <a
           href="https://www.facebook.com/sharer/sharer.php?{{ facebookParams }}"
@@ -26,7 +29,7 @@ layout: default
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/facebook.svg" width="16" />
+          <img src="/images/social/facebook.svg" width="16" />
         </a>
         <a
           href="https://www.linkedin.com/shareArticle?mini=true&{{ linkedinParams }}"
@@ -34,14 +37,13 @@ layout: default
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/linkedin.svg" width="16" />
+          <img src="/images/social/linkedin.svg" width="16" />
         </a>
-        &nbsp; {{ page.date | date: "%b %-d, %Y" }}
-      </span>
-      <h1 class="post-header">
+      </div>
+    </div>
+    <h1>
         <a class="post-link" href="{{ postUrl }}">{{ page.title }}</a>
       </h1>
-    </div>
   </header>
 
   <article class="post-content">

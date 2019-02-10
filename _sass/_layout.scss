@@ -225,11 +225,15 @@
   }
 }
 
+.post-header-area {
+  margin-bottom: 5px;
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
   float: right;
-  padding-top: 8px;
+  padding-top: 5px;
 }
 
 .post-link {
@@ -260,7 +264,12 @@
  */
 .post-header {
   // margin-bottom: $spacing-unit;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+}
+
+.post-header-social {
+  // margin-bottom: $spacing-unit;
+  float: right;
 }
 
 .post-title {
