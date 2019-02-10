@@ -28,9 +28,9 @@ Voila! The blog is up and running.  No real content but that's up to you anyway.
 
 # Custom domain
 
-Having your blog at yourname.github.io or some such is not that fun.  Luckily you can setup a custom domain and have it pointed to the published GitHub Pages.  This can be done for an "apex" domain like [mcaffer.com](http://mcaffer.com) or for a sub-domain like blog.mcaffer.com.  I did the apex domain.  GitHub has [instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).  They are a little circuitous but basically net out to three steps.
+Having your blog at yourname.github.io or some such is not that fun.  Luckily you can setup a custom domain and have it pointed to the published GitHub Pages.  This can be done for an "apex" domain like [mcaffer.com](https://mcaffer.com) or for a sub-domain like blog.mcaffer.com.  I did the apex domain.  GitHub has [instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).  They are a little circuitous but basically net out to three steps.
 
-1. Register you domain name.  I already had [mcaffer.com](http://mcaffer.com) so this was a no-op.  Hit up [godaddy](godaddy.com) or some other registrar to get your domain.
+1. Register you domain name.  I already had [mcaffer.com](https://mcaffer.com) so this was a no-op.  Hit up [godaddy](godaddy.com) or some other registrar to get your domain.
 1. Create a `CNAME` file.  This tells GitHub where the site will show up in URL space.  The file must be all named in all CAPS and be at the root of your repo.  It must have just one line and that line is just the name of the (sub)domain where you are putting your blog.  My file just has `mcaffer.com` on a line by itself.   Note that you use a file called CNAME regardless of whether you are doing an apex domain or sub-domain.
 1. Setup a DNS entry.  You have to tell "the internet" where your domain is located.  The steps will vary by domain registrar or DNS provider.  Check out the [handy instructions on GitHub](https://help.github.com/articles/adding-a-cname-file-to-your-repository/#next-steps-configuring-dns-settings).
 
