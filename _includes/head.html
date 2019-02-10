@@ -9,14 +9,14 @@
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">
   <meta property="og:title" content="{{ pageTitle }}"/>
-  <meta property="og:image" content="https://mcaffer.com/images/header/5.jpg"/>
+  <meta property="og:image" content="{{ "/images/header/5.jpg" | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:description" content="{{ pageDescription }}"/>
-  <meta property="og:url" content="https://mcaffer.com{{ page.url | prepend: site.baseurl }}" />
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <link rel="shortcut icon" href="/images/helmet.png" >
+  <link rel="shortcut icon" href="{{ "/images/helmet.png" | prepend: site.baseurl | prepend: site.url }}" >
 
   {% include googleanalytics.html %}
 
