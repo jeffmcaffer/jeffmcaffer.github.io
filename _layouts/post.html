@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture postUrl %}{{ page.url | prepend: site.baseurl | prepend: site.url | uri_escape }}{% endcapture %} 
+{% capture postUrl %}https://mcaffer.com{{ page.url | prepend: site.baseurl | uri_escape }}{% endcapture %} 
 {% capture postSnag %}Jeff McAffer blogged about {{ page.title }}{% endcapture %} 
 {% capture twitterParams %}text={{ postSnag | uri_escape }}&url={{ postUrl }}{% endcapture %} 
 {% capture facebookParams %}t={{ postSnag | uri_escape }}&u={{ postUrl }}{% endcapture %}
