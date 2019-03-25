@@ -49,7 +49,7 @@ GitHub. There has been a substantive change in product and engineering energy we
 
 So, in the end I’m not going far. Starting in April, I’ll be at GitHub supporting an effort to enable Open Source @ Scale for everyone on GitHub. This is a huge opportunity to marry the learnings from my time at Microsoft's OSPO and interactions with the great folks in the [TODO group](https://todogroup.org) and in countless companies and governments over the years, with the energy and efforts afoot at GitHub.
 
-To say the least, I'm stoked. (Yes, I said "stoked" and will endure exhaustive teasing from my kids, but that's really the only single term I can come up with that captures the nuances of how I feel about this change). The potential and opportunity of helping all organizations evolve their open source practice and the reality of making it happen at GitHub is too much to pass up.
+To say the least, I'm stoked. (Yes, I said "stoked" and will endure exhaustive teasing from my kids, but that's really the only single term I can come up with that captures the nuances of how I feel about this change.) The potential and opportunity of helping all organizations evolve their open source practice and the reality of making it happen at GitHub is too much to pass up.
 
 For those who have been following some of my latest interests, you will know about [ClearlyDefined](https://clearlydefined.io). That project has been a passion of mine and, I believe, is critical to open source in the industry. I remain committed to the project and will continue to be involved as will the team at Microsoft. My hope is that this move actually accelerates interest and adoption. 
 
