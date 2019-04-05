@@ -23,6 +23,8 @@ This is preliminary data and there may be some anomalies in the measurements but
 
 This is an issue because even the simplest open source license (e.g., MIT) has terms that require consumers to do something. The most common is including the package's copyright(s) and license text when distributing the package. See [my post on open source compliance](https://mcaffer.com/2019/02/Open-source-compliance-gone-amok) for more detail. 
 
+# The role of package management
+
 Package managers are fantastic at making it super simple for direct and indirect consumers to get packages. This enables package distributors, other open source projects, product teams) to simply get the required packages, bundle them up with their own code, and ship. If these packages all include the required attribution items, it's relatively easy for them to generate an explicit `NOTICE` file since all the raw materials are available in the packages themselves. Nice and easy.
 
 If the packages don't include the license and copyright text, then what's the consuming team to do? They have a set of, perhaps 1000, packages but no attribution material. Assuming they know the license of the package (presumably they do otherwise they can't be sure of their right to use the package in the first place), teams can go to the [Open Source Initiative](https://opensource.org) or some other source and get a copy of the canonical license text. Unfortunately, this does not address the attribution requirements of many licenses (e.g., the MIT license requires the reproduction of the “above copyright notice” presumably for whatever source files the license was originally on). Sigh.
