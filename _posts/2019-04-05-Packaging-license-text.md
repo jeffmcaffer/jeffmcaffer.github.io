@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Packaging license text: Just do it"
+title: "Packaging license text: It's the right thing to do"
 date: 2019-04-05 11:11:11
 tags: opensource ospo
 ---
@@ -18,8 +18,6 @@ Crate | 59
 Gem | 56
 npm | 55
 PyPI | 30
-NuGet | 4
-Maven | 0
 
 This is preliminary data and there may be some anomalies in the measurements but given there are ~350K package versions in the dataset, the general point remains the same &mdash; license and attribution material in packages is pretty sparse.
 
@@ -47,6 +45,8 @@ The NuGet team recently [updated their `nuspec`](https://github.com/NuGet/Home/w
 
 # Wrap up
 
-I've not done exhaustive research on which package managers promote the inclusion of license files but can say from the data we are seeing in ClearlyDefined, there are not many and/or they are not working particularly well &mdash; developers are a bit on their own.
+I've not done exhaustive research on which package managers promote the inclusion of license files but can say from the data we are seeing in ClearlyDefined, there is still room to improve.
 
 If you do publish packages, please take a minute to check your packaging scripts and ensure they include the license file (you do have one, right?!) in the list of packaged files. It's really easy and really simplifies the lives of consumers who are trying to comply with your license. Who knows, perhaps you are consuming some packages and would benefit from them including license text...
+
+If you run or have influence over the package publishing tools or workflow for an ecosystem, foundation, project set, ... please look at how you can nudge your users to include this important info in their packages (or just do it for them).
